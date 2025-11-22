@@ -140,24 +140,5 @@ if (hamburger && nav) {
 }
 
 // DOWNLOAD BUTTON FUNCTIONALITY
-// This function handles download button clicks
-// BUTTON SELECTOR: Change '.download-btn' below if you use a different class
-const downloadButtons = document.querySelectorAll('.download-btn');
-downloadButtons.forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        // PLATFORM DETECTION: Change 'h3' below if you use a different element
-        const platform = this.closest('.download-card').querySelector('h3').textContent;
-        
-        if (platform === 'Android') {
-            // ANDROID DOWNLOAD ALERT: Change the text below
-            // In a real application, this would link to your APK file
-            alert('Android app download would start now. In a real implementation, this would download the APK file.');
-        } else if (platform === 'iOS') {
-            // IOS DOWNLOAD ALERT: Change the text below
-            // In a real application, this would redirect to the App Store
-            alert('In a real implementation, this would redirect to the App Store.');
-        }
-    });
-});
+// Download buttons now work directly with href attributes
+// No JavaScript needed as links open in new tabs automatically
