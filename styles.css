@@ -1,0 +1,771 @@
+/* Global Styles */
+/* FONT FAMILY: Change 'Poppins' below to your preferred Google Font */
+/* BACKGROUND COLOR: Change '#f8f9fa' below to change site background */
+/* TEXT COLOR: Change '#333' below to change default text color */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+/* FLOATING HEADER WITH GLASS MORPHISM EFFECT */
+/* HEADER BACKGROUND: Glass effect with transparency */
+/* HEADER SHADOW: Enhanced shadow for floating effect */
+/* LOGO HEIGHT: Change '40px' below to adjust logo size */
+/* PRIMARY COLOR: '#2196F3' is the main brand color, change as needed */
+header {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    position: fixed;
+    width: 90%;
+    top: 20px;
+    left: 5%;
+    z-index: 1000;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2196F3;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 15px;
+}
+
+nav ul li a:hover {
+    color: #2196F3;
+    background: rgba(33, 150, 243, 0.1);
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger:hover {
+    background: rgba(33, 150, 243, 0.1);
+}
+
+/* Hero Section */
+/* HERO PADDING: Adjust '150px 0 100px' below for top/bottom spacing */
+/* HERO GRADIENT: Modify colors '#2196F3' and '#21CBF3' below */
+/* HERO TEXT COLOR: Currently 'white', change if needed */
+.hero {
+    padding: 120px 0 100px;
+    background: linear-gradient(135deg, #2196F3 0%, #21CBF3 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(30deg);
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* BUTTON STYLES */
+/* BUTTON PADDING: Adjust '15px 30px' below */
+/* BUTTON BORDER RADIUS: Change '50px' below for roundness */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+/* PRIMARY BUTTON - ANDROID DOWNLOAD */
+/* BACKGROUND COLOR: Change '#FF9800' below */
+.primary-btn {
+    background-color: #FF9800;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #F57C00;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* SECONDARY BUTTON - IOS DOWNLOAD */
+/* BORDER COLOR: Change '2px solid white' below */
+.secondary-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.secondary-btn:hover {
+    background-color: white;
+    color: #2196F3;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Titles */
+/* SECTION TITLE SIZE: Change '2.5rem' below */
+/* SECTION TITLE COLOR: Change '#2196F3' below */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #2196F3;
+}
+
+/* SECTION SUBTITLE SIZE: Change '1.2rem' below */
+/* SECTION SUBTITLE COLOR: Change '#666' below */
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: #666;
+}
+
+/* Features Section */
+/* FEATURES PADDING: Adjust '100px 0' below */
+/* FEATURES BACKGROUND: Change '#fff' below */
+.features {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+/* FEATURES GRID */
+/* COLUMN MIN WIDTH: Change '300px' below */
+/* GRID GAP: Change '30px' below */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* FEATURE CARD */
+/* CARD BACKGROUND: Change '#f8f9fa' below */
+/* CARD BORDER RADIUS: Change '15px' below */
+/* CARD PADDING: Change '30px' below */
+.feature-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* FEATURE ICON */
+/* ICON SIZE: Change '3rem' below */
+/* ICON COLOR: Change '#2196F3' below */
+.feature-icon {
+    font-size: 3rem;
+    color: #2196F3;
+    margin-bottom: 20px;
+}
+
+/* FEATURE TITLE */
+/* TITLE SIZE: Change '1.5rem' below */
+/* TITLE COLOR: Change '#333' below */
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* FEATURE DESCRIPTION */
+/* DESCRIPTION COLOR: Change '#666' below */
+/* DESCRIPTION SIZE: Change '1rem' below */
+.feature-card p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Download Section */
+/* DOWNLOAD PADDING: Adjust '100px 0' below */
+/* DOWNLOAD BACKGROUND GRADIENT: Modify colors below */
+.download {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
+}
+
+/* DOWNLOAD OPTIONS */
+/* GAP BETWEEN CARDS: Change '50px' below */
+.download-options {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* DOWNLOAD CARD */
+/* CARD BACKGROUND: Change '#fff' below */
+/* CARD BORDER RADIUS: Change '20px' below */
+/* CARD PADDING: Change '40px 30px' below */
+/* CARD WIDTH: Change '300px' below */
+.download-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.download-card:hover {
+    transform: translateY(-10px);
+}
+
+/* DOWNLOAD ICON */
+/* ICON SIZE: Change '4rem' below */
+.download-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+/* ANDROID ICON COLOR: Change '#4CAF50' below */
+.download-card:nth-child(1) .download-icon {
+    color: #4CAF50;
+}
+
+/* IOS ICON COLOR: Change '#333' below */
+.download-card:nth-child(2) .download-icon {
+    color: #333;
+}
+
+/* PLATFORM TITLE */
+/* TITLE SIZE: Change '1.8rem' below */
+/* TITLE COLOR: Change '#333' below */
+.download-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* VERSION TEXT */
+/* TEXT COLOR: Change '#666' below */
+.download-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* DOWNLOAD BUTTON */
+/* BUTTON WIDTH: Currently 100%, change if needed */
+/* BUTTON PADDING: Change '15px' below */
+.download-btn {
+    width: 100%;
+    padding: 15px;
+}
+
+/* Contact Section */
+/* CONTACT PADDING: Adjust '100px 0' below */
+/* CONTACT BACKGROUND: Change '#fff' below */
+.contact {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+/* CONTACT CONTENT */
+/* GAP BETWEEN COLUMNS: Change '50px' below */
+.contact-content {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* CONTACT ITEM */
+/* ITEM MARGIN: Change '30px' below */
+.contact-item {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+/* CONTACT ICON */
+/* ICON SIZE: Change '1.5rem' below */
+/* ICON COLOR: Change '#2196F3' below */
+/* ICON SPACING: Change '20px' margin-right below */
+.contact-icon {
+    font-size: 1.5rem;
+    color: #2196F3;
+    margin-right: 20px;
+    min-width: 40px;
+}
+
+/* CONTACT TITLE */
+/* TITLE SIZE: Change '1.2rem' below */
+/* TITLE COLOR: Change '#333' below */
+.contact-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* CONTACT TEXT */
+/* TEXT COLOR: Change '#666' below */
+.contact-item p {
+    color: #666;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* FORM INPUTS */
+/* INPUT WIDTH: Currently 100%, change if needed */
+/* INPUT PADDING: Change '15px' below */
+/* INPUT BORDER: Modify '1px solid #ddd' below */
+/* INPUT BORDER RADIUS: Change '10px' below */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #2196F3;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Installation Guide */
+.installation-guide {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.guide-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.guide-step {
+    flex: 1;
+    min-width: 300px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.guide-step h3 {
+    color: #2196F3;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.screenshot-placeholder {
+    background: #e3f2fd;
+    border: 2px dashed #2196F3;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.screenshot-placeholder p {
+    color: #1976D2;
+    margin: 10px 0;
+}
+
+.guide-step ol {
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.guide-step li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Footer */
+/* FOOTER BACKGROUND: Change '#1a237e' below */
+/* FOOTER TEXT COLOR: Currently 'white', change if needed */
+/* FOOTER PADDING: Adjust '50px 0 20px' below */
+footer {
+    background-color: #1a237e;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+/* FOOTER LOGO */
+/* LOGO HEIGHT: Change '40px' below */
+/* LOGO SPACING: Change '10px' margin-right below */
+.footer-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* FOOTER LOGO TEXT */
+/* TEXT SIZE: Change '1.5rem' below */
+/* TEXT WEIGHT: Change '600' below */
+.footer-logo h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* FOOTER LINKS */
+/* LINK SPACING: Change '20px' below */
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #2196F3;
+}
+
+/* SOCIAL ICONS */
+/* ICON SPACING: Change '15px' below */
+/* ICON SIZE: Change '1.2rem' below */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #2196F3;
+}
+
+/* FOOTER BOTTOM */
+/* TEXT ALIGNMENT: Currently 'center', change if needed */
+/* BORDER COLOR: Modify rgba values below */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content {
+        margin-bottom: 50px;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    /* Adjust floating header for medium screens */
+    header {
+        width: 95%;
+        left: 2.5%;
+        top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile Navigation - Hamburger Menu */
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 0;
+    }
+    
+    .logo {
+        order: 1;
+    }
+    
+    nav {
+        order: 3;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        margin-top: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        z-index: 1001;
+    }
+    
+    nav.active {
+        display: block;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding: 15px 0;
+        margin: 0;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 12px 20px;
+        margin: 0 20px;
+        border-radius: 10px;
+    }
+    
+    /* Hamburger Menu Button */
+    .hamburger {
+        display: block;
+        order: 2;
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: #333;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    
+    .hamburger:hover {
+        background: rgba(33, 150, 243, 0.1);
+    }
+    
+    .hero {
+        padding: 120px 0 80px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .download-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    /* Adjust floating header for small screens */
+    header {
+        width: 90%;
+        left: 5%;
+        top: 10px;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 95%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    /* Further adjust floating header for extra small screens */
+    header {
+        width: 95%;
+        left: 2.5%;
+        top: 8px;
+        padding: 0 10px;
+    }
+    
+    header .container {
+        padding: 12px 0;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
+    
+    .logo h1 {
+        font-size: 20px;
+    }
+}
